@@ -1,59 +1,58 @@
-cmake_minimum_required(VERSION 3.31.6)
-project("nexoai_native" LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.22)
+
+project(nexoai_native LANGUAGES C CXX)
 
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-set(LLAMA_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../engine/llama.cpp)
+set(LLAMA_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../../engine/llama.cpp")
+set(PREBUILT_DIR "${LLAMA_ROOT}/prebuilt/arm64-v8a")
 
-if(DEFINED ANDROID_ABI)
-    message(STATUS "Detected Android ABI: ${ANDROID_ABI}")
-    if(ANDROID_ABI STREQUAL "arm64-v8a")
-        set(GGML_SYSTEM_ARCH "ARM")
-        set(GGML_CPU_KLEIDIAI ON)
-        set(GGML_OPENMP ON)
-    elseif(ANDROID_ABI STREQUAL "x86_64")
-        set(GGML_SYSTEM_ARCH "x86")
-        set(GGML_CPU_KLEIDIAI OFF)
-        set(GGML_OPENMP OFF)
-    else()
-        message(FATAL_ERROR "Unsupported ABI: ${ANDROID_ABI}")
-    endif()
-endif()
+find_library(log-lib log)
 
-set(LLAMA_BUILD_COMMON ON)
-set(LLAMA_BUILD_EXAMPLES OFF)
-set(LLAMA_BUILD_TOOLS OFF)
-set(LLAMA_BUILD_TESTS OFF)
-set(LLAMA_BUILD_SERVER OFF)
-set(LLAMA_BUILD_APP OFF)
-set(LLAMA_OPENSSL OFF)
-set(LLAMA_FATAL_WARNINGS OFF)
-set(BUILD_SHARED_LIBS ON)
+add_library(llama STATIC IMPORTED)
+set_target_properties(llama PROPERTIES
+    IMPORTED_LOCATION "${PREBUILT_DIR}/libllama.a"
+    IMPORTED_LINK_INTERFACE_LANGUAGES "CXX"
+)
 
-add_subdirectory(${LLAMA_ROOT} ${CMAKE_BINARY_DIR}/llama_build)
+add_library(ggml STATIC IMPORTED)
+set_target_properties(ggml PROPERTIES
+    IMPORTED_LOCATION "${PREBUILT_DIR}/libggml.a"
+    IMPORTED_LINK_INTERFACE_LANGUAGES "C"
+)
 
-add_library(nexoai_native SHARED nexoai_native.cpp)
+add_library(ggml_cpu STATIC IMPORTED)
+set_target_properties(ggml_cpu PROPERTIES
+    IMPORTED_LOCATION "${PREBUILT_DIR}/libggml-cpu.a"
+    IMPORTED_LINK_INTERFACE_LANGUAGES "C"
+)
+
+add_library(nexoai_native SHARED
+    native-lib.cpp
+    llama_bridge.cpp
+)
 
 target_include_directories(nexoai_native PRIVATE
-    ${LLAMA_ROOT}
-    ${LLAMA_ROOT}/common
     ${LLAMA_ROOT}/include
     ${LLAMA_ROOT}/ggml/include
-    ${LLAMA_ROOT}/ggml/src
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-target_compile_definitions(nexoai_native PRIVATE
-    GGML_SYSTEM_ARCH=${GGML_SYSTEM_ARCH}
-    GGML_CPU_KLEIDIAI=$<BOOL:${GGML_CPU_KLEIDIAI}>
-    GGML_OPENMP=$<BOOL:${GGML_OPENMP}>
-)
-
-target_link_libraries(nexoai_native PRIVATE
+target_link_libraries(nexoai_native
+    PRIVATE
+    -Wl,--start-group
     llama
-    llama-common
+    ggml_cpu
+    ggml
+    -Wl,--end-group
+    ${log-lib}
     android
-    log
+)
+
+set_target_properties(nexoai_native PROPERTIES
+    OUTPUT_NAME "nexoai_native"
 )

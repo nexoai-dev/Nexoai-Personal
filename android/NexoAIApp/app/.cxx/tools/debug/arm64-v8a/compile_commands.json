@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a",
+  "command": "/opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android28 --sysroot=/opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dnexoai_native_EXPORTS -I/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/include -I/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/ggml/include -I/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -std=c++17 -fPIC -o CMakeFiles/nexoai_native.dir/native-lib.cpp.o -c /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/native-lib.cpp",
+  "file": "/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/native-lib.cpp",
+  "output": "CMakeFiles/nexoai_native.dir/native-lib.cpp.o"
+},
+{
+  "directory": "/workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a",
+  "command": "/opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android28 --sysroot=/opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dnexoai_native_EXPORTS -I/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/include -I/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/ggml/include -I/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -std=c++17 -fPIC -o CMakeFiles/nexoai_native.dir/llama_bridge.cpp.o -c /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/llama_bridge.cpp",
+  "file": "/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/llama_bridge.cpp",
+  "output": "CMakeFiles/nexoai_native.dir/llama_bridge.cpp.o"
+}
+]

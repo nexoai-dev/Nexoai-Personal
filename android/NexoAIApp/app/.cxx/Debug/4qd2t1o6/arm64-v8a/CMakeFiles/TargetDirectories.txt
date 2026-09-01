@@ -1,0 +1,3 @@
+/workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a/CMakeFiles/nexoai_native.dir
+/workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a/CMakeFiles/edit_cache.dir
+/workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a/CMakeFiles/rebuild_cache.dir
