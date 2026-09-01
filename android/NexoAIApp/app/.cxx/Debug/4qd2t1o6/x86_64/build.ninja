@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a/
+cmake_ninja_workdir = /workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/x86_64/
 # =============================================================================
 # Object build statements for SHARED_LIBRARY target nexoai_native
 
@@ -57,7 +57,7 @@ build CMakeFiles/nexoai_native.dir/native-lib.cpp.o: CXX_COMPILER__nexoai_native
   OBJECT_DIR = CMakeFiles/nexoai_native.dir
   OBJECT_FILE_DIR = CMakeFiles/nexoai_native.dir
   TARGET_COMPILE_PDB = CMakeFiles/nexoai_native.dir/
-  TARGET_PDB = /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.pdb
+  TARGET_PDB = /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.pdb
 
 build CMakeFiles/nexoai_native.dir/llama_bridge.cpp.o: CXX_COMPILER__nexoai_native_unscanned_Debug /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/llama_bridge.cpp || cmake_object_order_depends_target_nexoai_native
   DEFINES = -Dnexoai_native_EXPORTS
@@ -67,7 +67,7 @@ build CMakeFiles/nexoai_native.dir/llama_bridge.cpp.o: CXX_COMPILER__nexoai_nati
   OBJECT_DIR = CMakeFiles/nexoai_native.dir
   OBJECT_FILE_DIR = CMakeFiles/nexoai_native.dir
   TARGET_COMPILE_PDB = CMakeFiles/nexoai_native.dir/
-  TARGET_PDB = /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.pdb
+  TARGET_PDB = /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.pdb
 
 
 # =============================================================================
@@ -75,28 +75,28 @@ build CMakeFiles/nexoai_native.dir/llama_bridge.cpp.o: CXX_COMPILER__nexoai_nati
 
 
 #############################################
-# Link the shared library /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.so
+# Link the shared library /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.so
 
-build /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.so: CXX_SHARED_LIBRARY_LINKER__nexoai_native_Debug CMakeFiles/nexoai_native.dir/native-lib.cpp.o CMakeFiles/nexoai_native.dir/llama_bridge.cpp.o | /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common-base.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-cpu.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-base.a /opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so
+build /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.so: CXX_SHARED_LIBRARY_LINKER__nexoai_native_Debug CMakeFiles/nexoai_native.dir/native-lib.cpp.o CMakeFiles/nexoai_native.dir/llama_bridge.cpp.o | /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common-base.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-cpu.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml.a /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-base.a /opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/28/liblog.so
   DEP_FILE = CMakeFiles/nexoai_native.dir/link.d
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info
   LINK_FLAGS = -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments    -Xlinker --dependency-file=CMakeFiles/nexoai_native.dir/link.d
-  LINK_LIBRARIES = -Wl,--start-group  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common-base.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-cpu.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-base.a  -Wl,--end-group  /opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so  -landroid  -latomic -lm
+  LINK_LIBRARIES = -Wl,--start-group  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common-base.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-cpu.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml.a  /workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-base.a  -Wl,--end-group  /opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/28/liblog.so  -landroid  -latomic -lm
   OBJECT_DIR = CMakeFiles/nexoai_native.dir
   POST_BUILD = :
   PRE_LINK = :
   SONAME = libnexoai_native.so
   SONAME_FLAG = -Wl,-soname,
   TARGET_COMPILE_PDB = CMakeFiles/nexoai_native.dir/
-  TARGET_FILE = /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.so
-  TARGET_PDB = /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.pdb
+  TARGET_FILE = /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.so
+  TARGET_PDB = /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a && /opt/android-sdk/cmake/3.31.6/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/x86_64 && /opt/android-sdk/cmake/3.31.6/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -107,7 +107,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a && /opt/android-sdk/cmake/3.31.6/bin/cmake --regenerate-during-build -S/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp -B/workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a
+  COMMAND = cd /workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/x86_64 && /opt/android-sdk/cmake/3.31.6/bin/cmake --regenerate-during-build -S/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp -B/workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/x86_64
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -117,9 +117,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build libnexoai_native.so: phony /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.so
+build libnexoai_native.so: phony /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.so
 
-build nexoai_native: phony /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.so
+build nexoai_native: phony /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.so
 
 # =============================================================================
 # Folder targets.
@@ -127,9 +127,9 @@ build nexoai_native: phony /workspaces/Nexoai-Personal/android/NexoAIApp/app/bui
 # =============================================================================
 
 #############################################
-# Folder: /workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/arm64-v8a
+# Folder: /workspaces/Nexoai-Personal/android/NexoAIApp/app/.cxx/Debug/4qd2t1o6/x86_64
 
-build all: phony /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.so
+build all: phony /workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.so
 
 # =============================================================================
 # Built-in targets

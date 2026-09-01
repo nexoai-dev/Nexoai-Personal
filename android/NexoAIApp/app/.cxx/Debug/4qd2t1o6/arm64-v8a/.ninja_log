@@ -1,3 +1,4 @@
 # ninja log v6
-4	771	1788292529672782665	CMakeFiles/nexoai_native.dir/native-lib.cpp.o	ef177c0fde1b542b
-9	629	1788292558207780854	CMakeFiles/nexoai_native.dir/llama_bridge.cpp.o	96a5447962aa6b92
+1	775	1788295302634606677	CMakeFiles/nexoai_native.dir/native-lib.cpp.o	ef177c0fde1b542b
+2	1109	1788295302635606677	CMakeFiles/nexoai_native.dir/llama_bridge.cpp.o	96a5447962aa6b92
+1109	1407	1788295303742606606	/workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.so	ee6c4c8d342cb507

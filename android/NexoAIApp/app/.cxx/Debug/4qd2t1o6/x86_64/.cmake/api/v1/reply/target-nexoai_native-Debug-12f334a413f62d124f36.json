@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/arm64-v8a/libnexoai_native.so"
+			"path" : "/workspaces/Nexoai-Personal/android/NexoAIApp/app/build/intermediates/cxx/Debug/4qd2t1o6/obj/x86_64/libnexoai_native.so"
 		}
 	],
 	"backtrace" : 1,
@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 34,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 45,
+				"line" : 63,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 39,
+				"line" : 57,
 				"parent" : 0
 			}
 		]
@@ -114,6 +114,16 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libllama-common-base.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-cpu.a",
 				"role" : "libraries"
 			},
@@ -124,12 +134,17 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "/workspaces/Nexoai-Personal/android/NexoAIApp/app/src/main/cpp/../../../../../../engine/llama.cpp/prebuilt/arm64-v8a/libggml-base.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "-Wl,--end-group",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so",
+				"fragment" : "/opt/android-sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/28/liblog.so",
 				"role" : "libraries"
 			},
 			{

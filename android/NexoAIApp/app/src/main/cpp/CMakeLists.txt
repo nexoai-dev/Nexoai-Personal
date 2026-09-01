@@ -19,6 +19,18 @@ set_target_properties(llama PROPERTIES
     IMPORTED_LINK_INTERFACE_LANGUAGES "CXX"
 )
 
+add_library(llama_common STATIC IMPORTED)
+set_target_properties(llama_common PROPERTIES
+    IMPORTED_LOCATION "${PREBUILT_DIR}/libllama-common.a"
+    IMPORTED_LINK_INTERFACE_LANGUAGES "CXX"
+)
+
+add_library(llama_common_base STATIC IMPORTED)
+set_target_properties(llama_common_base PROPERTIES
+    IMPORTED_LOCATION "${PREBUILT_DIR}/libllama-common-base.a"
+    IMPORTED_LINK_INTERFACE_LANGUAGES "CXX"
+)
+
 add_library(ggml STATIC IMPORTED)
 set_target_properties(ggml PROPERTIES
     IMPORTED_LOCATION "${PREBUILT_DIR}/libggml.a"
@@ -28,6 +40,12 @@ set_target_properties(ggml PROPERTIES
 add_library(ggml_cpu STATIC IMPORTED)
 set_target_properties(ggml_cpu PROPERTIES
     IMPORTED_LOCATION "${PREBUILT_DIR}/libggml-cpu.a"
+    IMPORTED_LINK_INTERFACE_LANGUAGES "C"
+)
+
+add_library(ggml_base STATIC IMPORTED)
+set_target_properties(ggml_base PROPERTIES
+    IMPORTED_LOCATION "${PREBUILT_DIR}/libggml-base.a"
     IMPORTED_LINK_INTERFACE_LANGUAGES "C"
 )
 
@@ -46,8 +64,11 @@ target_link_libraries(nexoai_native
     PRIVATE
     -Wl,--start-group
     llama
+    llama_common
+    llama_common_base
     ggml_cpu
     ggml
+    ggml_base
     -Wl,--end-group
     ${log-lib}
     android
